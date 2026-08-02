@@ -19,11 +19,11 @@ export const Route = createFileRoute("/programs")({
       },
     ],
   }),
-  component: Programs;
+  component: Programs,
 });
 
 function Programs() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const items = [
     { t: "p1.title", b: "p1.body", meta: { en: "Ages 10+ · 5 days/week", ar: "من ١٠ سنوات · ٥ أيام أسبوعياً" } },
     { t: "p2.title", b: "p2.body", meta: { en: "All ages · 3 days/week", ar: "كل الأعمار · ٣ أيام أسبوعياً" } },
@@ -40,16 +40,11 @@ function Programs() {
             <h2 className="font-display text-xl font-bold">{t(p.t)}</h2>
             <p className="mt-2 flex-1 text-sm leading-relaxed text-muted-foreground">{t(p.b)}</p>
             <p className="mt-4 text-xs font-semibold uppercase tracking-[0.14em] text-primary">
-              {useMeta(p.meta)}
+              {p.meta[lang]}
             </p>
           </article>
         ))}
       </section>
     </PageShell>
   );
-}
-
-function useMeta(meta: { en: string; ar: string }) {
-  const { lang } = useI18n();
-  return meta[lang];
 }
