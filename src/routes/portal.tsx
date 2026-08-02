@@ -2,7 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, ShieldCheck } from "lucide-react";
 
 import hero1 from "@/assets/hero-1.jpg";
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
@@ -47,7 +47,7 @@ function Portal() {
       <div className="flex flex-col justify-center bg-background px-6 py-14 sm:px-14">
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 flex items-center justify-between">
-            <img src={logo} alt="" width={44} height={44} className="h-11 w-11" />
+            <img src={logoAsset.url} alt="" width={44} height={44} className="h-11 w-11" />
             <div className="flex gap-2">
               <button
                 type="button"

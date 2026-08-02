@@ -1,6 +1,6 @@
 import { Link } from "@tanstack/react-router";
 
-import logo from "@/assets/logo.png";
+import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 
 export function SiteFooter() {
@@ -11,7 +11,7 @@ export function SiteFooter() {
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           <div className="flex items-center gap-3">
-            <img src={logo} alt="" width={36} height={36} loading="lazy" className="h-9 w-9" />
+            <img src={logoAsset.url} alt="" width={36} height={36} loading="lazy" className="h-9 w-9" />
             <span className="font-display text-lg font-bold">{t("school.name")}</span>
           </div>
           <p className="mt-3 max-w-sm text-sm text-muted-foreground">{t("footer.tag")}</p>
