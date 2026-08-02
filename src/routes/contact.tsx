@@ -45,7 +45,7 @@ function Contact() {
                 <div className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
                   {t(d.label)}
                 </div>
-                <div className="mt-1 text-sm font-medium" dir={d.ltr ? "ltr" : undefined}>
+                <div className="mt-1 text-sm font-medium">
                   {d.value}
                 </div>
               </div>

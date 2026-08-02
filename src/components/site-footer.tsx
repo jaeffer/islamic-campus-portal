@@ -44,8 +44,7 @@ export function SiteFooter() {
           </h3>
           <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
             <li>{t("contact.addressV")}</li>
-            <li dir="ltr">+20 100 555 0142</li>
-            <li dir="ltr">info@nur-albayan.edu</li>
+            <li>{t("contact.hoursV")}</li>
           </ul>
         </div>
       </div>
