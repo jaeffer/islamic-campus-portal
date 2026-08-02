@@ -27,7 +27,7 @@ export function SiteHeader() {
           <span className="flex flex-col leading-tight">
             <span className="font-display text-base font-bold sm:text-lg">{t("school.short")}</span>
             <span className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground">
-              {lang === "ar" ? "معهد قرآني" : "Quran Institute"}
+              {t("school.kicker")}
             </span>
           </span>
         </Link>
@@ -49,11 +49,11 @@ export function SiteHeader() {
         <div className="ms-auto flex items-center gap-2 lg:ms-0">
           <button
             type="button"
-            onClick={() => setLang(lang === "en" ? "ar" : "en")}
+            onClick={() => setLang(lang === "en" ? "am" : "en")}
             className="rounded-md border border-border px-2.5 py-2 text-xs font-semibold tracking-wide text-foreground transition-colors hover:bg-accent"
             aria-label="Change language"
           >
-            {lang === "en" ? "العربية" : "EN"}
+            {lang === "en" ? "አማርኛ" : "EN"}
           </button>
           <button
             type="button"

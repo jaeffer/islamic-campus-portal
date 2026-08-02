@@ -9,14 +9,14 @@ import { useTheme } from "@/lib/theme";
 export const Route = createFileRoute("/portal")({
   head: () => ({
     meta: [
-      { title: "Staff Portal Sign In — Nur Al-Bayan Quran Institute" },
+      { title: "Staff Portal Sign In — Al Imam Hassan Quran Institute" },
       {
         name: "description",
         content:
-          "Secure sign-in for teachers and administration to manage circles, attendance and student progress.",
+          "Secure sign-in for ustadhs and administration to manage classes, attendance and student progress.",
       },
-      { property: "og:title", content: "Staff Portal — Nur Al-Bayan" },
-      { property: "og:description", content: "Sign in to the institute staff portal." },
+      { property: "og:title", content: "Staff Portal — Al Imam Hassan Quran Institute" },
+      { property: "og:description", content: "Sign in to the madrasa staff portal." },
       { name: "robots", content: "noindex" },
     ],
   }),
@@ -51,10 +51,10 @@ function Portal() {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setLang(lang === "en" ? "ar" : "en")}
+                onClick={() => setLang(lang === "en" ? "am" : "en")}
                 className="rounded-md border border-border px-2.5 py-1.5 text-xs font-semibold hover:bg-accent"
               >
-                {lang === "en" ? "العربية" : "EN"}
+                {lang === "en" ? "አማርኛ" : "EN"}
               </button>
               <button
                 type="button"
