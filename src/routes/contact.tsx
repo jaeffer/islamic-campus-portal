@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Clock, Mail, MapPin, Phone } from "lucide-react";
+import { Building2, Clock, MapPin, UserPlus } from "lucide-react";
 
 import { PageHeader, PageShell } from "@/components/page-shell";
 import { useI18n } from "@/lib/i18n";
@@ -7,16 +7,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact & Admissions — Nur Al-Bayan Quran Institute" },
+      { title: "Contact & Registration — Al Imam Hassan Quran Institute" },
       {
         name: "description",
         content:
-          "Visit, call or message the administration of Nur Al-Bayan Quran Institute. Office hours Sunday to Thursday, 8:00 to 16:00.",
+          "Visit the madrasa at the Imam Hassan Mosque, Atena Tera, Kolfe, Addis Ababa. Office hours 2:00 to 12:30 local time.",
       },
-      { property: "og:title", content: "Contact Nur Al-Bayan Quran Institute" },
+      { property: "og:title", content: "Contact Al Imam Hassan Quran Institute" },
       {
         property: "og:description",
-        content: "Reach the administration for admissions and enquiries.",
+        content: "Reach the administration for registration and enquiries.",
       },
     ],
   }),
@@ -27,10 +27,10 @@ function Contact() {
   const { t } = useI18n();
 
   const details = [
-    { icon: MapPin, label: "contact.address", value: t("contact.addressV"), ltr: false },
-    { icon: Phone, label: "contact.phone", value: "+20 100 555 0142", ltr: true },
-    { icon: Mail, label: "contact.email", value: "info@nur-albayan.edu", ltr: true },
-    { icon: Clock, label: "contact.hours", value: t("contact.hoursV"), ltr: false },
+    { icon: MapPin, label: "contact.address", value: t("contact.addressV") },
+    { icon: Building2, label: "contact.place", value: t("contact.placeV") },
+    { icon: Clock, label: "contact.hours", value: t("contact.hoursV") },
+    { icon: UserPlus, label: "contact.reg", value: t("contact.regV") },
   ] as const;
 
   return (
