@@ -6,16 +6,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/programs")({
   head: () => ({
     meta: [
-      { title: "Programs — Hifz, Tajweed, Islamic Studies & Kids Foundation" },
+      { title: "Levels & Classes — Al Imam Hassan Quran Institute" },
       {
         name: "description",
         content:
-          "Structured Quran tracks for every age: full hifz, tajweed and recitation, Islamic studies, and a gentle kids foundation course.",
+          "KG, primary, secondary and tertiary levels plus darsi for youth, mothers and fathers — Quran, Hadith, Fiqh and Tawheed from age 4.",
       },
-      { property: "og:title", content: "Programs at Nur Al-Bayan Quran Institute" },
+      { property: "og:title", content: "Levels at Al Imam Hassan Quran Institute" },
       {
         property: "og:description",
-        content: "Tracks from first letters to a full ijazah in recitation.",
+        content: "A path that starts at age 4 and continues for every age group.",
       },
     ],
   }),
@@ -25,10 +25,13 @@ export const Route = createFileRoute("/programs")({
 function Programs() {
   const { t, lang } = useI18n();
   const items = [
-    { t: "p1.title", b: "p1.body", meta: { en: "Ages 10+ · 5 days/week", ar: "من ١٠ سنوات · ٥ أيام أسبوعياً" } },
-    { t: "p2.title", b: "p2.body", meta: { en: "All ages · 3 days/week", ar: "كل الأعمار · ٣ أيام أسبوعياً" } },
-    { t: "p3.title", b: "p3.body", meta: { en: "Ages 12+ · 2 days/week", ar: "من ١٢ سنة · يومان أسبوعياً" } },
-    { t: "p4.title", b: "p4.body", meta: { en: "Ages 5–9 · 4 days/week", ar: "٥–٩ سنوات · ٤ أيام أسبوعياً" } },
+    { t: "p1.title", b: "p1.body", meta: { en: "From age 4", am: "ከ4 ዓመት ጀምሮ" } },
+    { t: "p2.title", b: "p2.body", meta: { en: "Primary school students", am: "የፕራይመሪ ተማሪዎች" } },
+    { t: "p3.title", b: "p3.body", meta: { en: "Secondary school students", am: "የሰከንደሪ ተማሪዎች" } },
+    { t: "p4.title", b: "p4.body", meta: { en: "University level", am: "የዩኒቨርሲቲ ደረጃ" } },
+    { t: "p5.title", b: "p5.body", meta: { en: "Youth", am: "ወጣቶች" } },
+    { t: "p6.title", b: "p6.body", meta: { en: "No age limit", am: "የእድሜ ገደብ የለውም" } },
+    { t: "p7.title", b: "p7.body", meta: { en: "Coming soon", am: "በቅርቡ" } },
   ] as const;
 
   return (

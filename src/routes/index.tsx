@@ -9,16 +9,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Nur Al-Bayan Quran Institute — Hifz, Tajweed & Islamic Studies" },
+      { title: "Al Imam Hassan Quran Institute — Quran, Hadith, Fiqh & Tawheed" },
       {
         name: "description",
         content:
-          "A licensed Quran school offering hifz, tajweed and Islamic studies with certified teachers. Admissions open for the new term.",
+          "A Quran madrasa in Kolfe, Addis Ababa, teaching children from age 4 up to university level, plus darsi for youth, mothers and fathers.",
       },
-      { property: "og:title", content: "Nur Al-Bayan Quran Institute" },
+      { property: "og:title", content: "Al Imam Hassan Quran Institute" },
       {
         property: "og:description",
-        content: "Memorize, understand and live the Quran with certified teachers.",
+        content: "Deen knowledge alongside school, for every age — since 2003 E.C.",
       },
     ],
   }),
@@ -26,10 +26,10 @@ export const Route = createFileRoute("/")({
 });
 
 const stats = [
-  { value: "480+", key: "stats.students", icon: Users },
-  { value: "26", key: "stats.teachers", icon: GraduationCap },
-  { value: "310", key: "stats.huffaz", icon: BookOpen },
-  { value: "29", key: "stats.years", icon: HeartHandshake },
+  { value: "4+", key: "stats.students", icon: Users },
+  { value: "7", key: "stats.teachers", icon: GraduationCap },
+  { value: "5+", key: "stats.huffaz", icon: BookOpen },
+  { value: "2003", key: "stats.years", icon: HeartHandshake },
 ] as const;
 
 const programs = [
@@ -37,6 +37,8 @@ const programs = [
   { t: "p2.title", b: "p2.body" },
   { t: "p3.title", b: "p3.body" },
   { t: "p4.title", b: "p4.body" },
+  { t: "p5.title", b: "p5.body" },
+  { t: "p6.title", b: "p6.body" },
 ] as const;
 
 function Home() {

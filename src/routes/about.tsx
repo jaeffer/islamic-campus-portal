@@ -7,16 +7,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Nur Al-Bayan Quran Institute — Mission & Story" },
+      { title: "About Al Imam Hassan Quran Institute — Mission & Story" },
       {
         name: "description",
         content:
-          "Our story since 1996: certified teachers with connected isnad, character education, and close family communication.",
+          "Founded in 2003 E.C. by the Al Imam Hassan mosque community in Kolfe, Addis Ababa, so children gain deen knowledge without interrupting school.",
       },
-      { property: "og:title", content: "About Nur Al-Bayan Quran Institute" },
+      { property: "og:title", content: "About Al Imam Hassan Quran Institute" },
       {
         property: "og:description",
-        content: "A community Quran school where every student is known by name.",
+        content: "Our story, vision, mission and core values.",
       },
     ],
   }),
@@ -39,10 +39,11 @@ function About() {
         <div className="space-y-4 text-sm leading-relaxed text-muted-foreground sm:text-base">
           <p>{t("about.p1")}</p>
           <p>{t("about.p2")}</p>
+          <p>{t("about.p3")}</p>
         </div>
         <img
           src={hero2}
-          alt="Quran study hall with wooden desks and shelves of mushaf copies"
+          alt="Study hall of Al Imam Hassan Quran Institute with wooden desks and shelves of kitabs"
           width={1920}
           height={1088}
           loading="lazy"

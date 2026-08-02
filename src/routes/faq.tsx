@@ -8,16 +8,16 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/faq")({
   head: () => ({
     meta: [
-      { title: "FAQ — Admissions, Timings & Fees | Nur Al-Bayan" },
+      { title: "FAQ — Ages, Levels & Class Times | Al Imam Hassan" },
       {
         name: "description",
         content:
-          "Answers about enrollment age, class timings, fees and scholarships, separate wings, progress reports and ijazah certificates.",
+          "Answers about the minimum age of 4, the KG to tertiary levels, subjects taught, level-matched kitabs and class hours.",
       },
-      { property: "og:title", content: "Frequently Asked Questions — Nur Al-Bayan" },
+      { property: "og:title", content: "Frequently Asked Questions — Al Imam Hassan" },
       {
         property: "og:description",
-        content: "What families ask us most before enrolling their children.",
+        content: "What families ask us most before registering their children.",
       },
     ],
   }),

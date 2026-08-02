@@ -8,163 +8,200 @@ import {
   type ReactNode,
 } from "react";
 
-export type Lang = "en" | "ar";
+export type Lang = "en" | "am";
 
-type Dict = Record<string, { en: string; ar: string }>;
+type Dict = Record<string, { en: string; am: string }>;
 
 const dict: Dict = {
-  "school.name": { en: "Nur Al-Bayan Quran Institute", ar: "معهد نور البيان للقرآن" },
-  "school.short": { en: "Nur Al-Bayan", ar: "نور البيان" },
-  "nav.home": { en: "Home", ar: "الرئيسية" },
-  "nav.about": { en: "About", ar: "عن المعهد" },
-  "nav.programs": { en: "Programs", ar: "البرامج" },
-  "nav.faq": { en: "FAQ", ar: "الأسئلة الشائعة" },
-  "nav.contact": { en: "Contact", ar: "اتصل بنا" },
-  "nav.portal": { en: "Staff Portal", ar: "بوابة الموظفين" },
-  "hero.eyebrow": { en: "Established 1996 · Licensed Quran Institute", ar: "تأسس عام ١٩٩٦ · معهد قرآني معتمد" },
-  "hero.title": { en: "Memorize. Understand. Live the Quran.", ar: "احفظ. افهم. اعمل بالقرآن." },
+  "school.name": { en: "Al Imam Hassan Quran Institute", am: "አል ኢማም ሃሰን ቁርአን መድረሳ" },
+  "school.short": { en: "Al Imam Hassan", am: "አል ኢማም ሃሰን" },
+  "school.kicker": { en: "Quran Madrasa", am: "ቁርአን መድረሳ" },
+  "nav.home": { en: "Home", am: "መነሻ" },
+  "nav.about": { en: "About", am: "ስለ እኛ" },
+  "nav.programs": { en: "Programs", am: "የትምህርት ደረጃዎች" },
+  "nav.faq": { en: "FAQ", am: "ጥያቄና መልስ" },
+  "nav.contact": { en: "Contact", am: "አግኙን" },
+  "nav.portal": { en: "Staff Portal", am: "የሰራተኞች መግቢያ" },
+  "hero.eyebrow": {
+    en: "Established 2003 E.C. · Kolfe, Addis Ababa",
+    am: "በ2003 ዓ/ም የተመሰረተ · ኮልፌ፣ አዲስ አበባ",
+  },
+  "hero.title": {
+    en: "Deen knowledge alongside school, for every age.",
+    am: "ት/ታቸውን ሳያቋርጡ የዲን ትምህርት፣ ለሁሉም እድሜ።",
+  },
   "hero.sub": {
-    en: "A complete Quran school for hifz, tajweed and Islamic studies — guided by certified teachers with authentic isnad.",
-    ar: "مدرسة قرآنية متكاملة للحفظ والتجويد والعلوم الشرعية بإشراف معلمين مجازين بسند متصل.",
+    en: "Quran, Hadith, Fiqh and Tawheed taught from age 4 up to university level — and beyond, with dedicated classes for youth, mothers and fathers.",
+    am: "ቁርአን፣ ሃዲስ፣ ፊቅህ እና ተውሂድ ከ4 ዓመት ጀምሮ እስከ ዩኒቨርሲቲ ደረጃ — እንዲሁም ለወጣቶች፣ ለእናቶች እና ለአባቶች የተዘጋጁ ደርሶች።",
   },
-  "hero.cta1": { en: "Apply for admission", ar: "التقديم للتسجيل" },
-  "hero.cta2": { en: "Explore programs", ar: "استعرض البرامج" },
-  "stats.students": { en: "Students enrolled", ar: "طالب مسجل" },
-  "stats.teachers": { en: "Certified teachers", ar: "معلم مجاز" },
-  "stats.huffaz": { en: "Graduated huffaz", ar: "حافظ متخرج" },
-  "stats.years": { en: "Years of service", ar: "سنة من العطاء" },
-  "programs.title": { en: "Our Programs", ar: "برامجنا" },
+  "hero.cta1": { en: "Register a student", am: "ተማሪ ያስመዝግቡ" },
+  "hero.cta2": { en: "See our levels", am: "ደረጃዎቻችንን ይመልከቱ" },
+  "stats.students": { en: "Learning from age 4", am: "ከ4 ዓመት ጀምሮ" },
+  "stats.teachers": { en: "Levels offered", am: "የትምህርት ደረጃዎች" },
+  "stats.huffaz": { en: "Subject areas beyond Quran", am: "ከቁርአን ባሻገር የደርስ አይነቶች" },
+  "stats.years": { en: "Founded (E.C.)", am: "የተመሰረተበት ዓ/ም" },
+  "programs.title": { en: "Our Levels & Classes", am: "የትምህርት ደረጃዎቻችን" },
   "programs.sub": {
-    en: "Structured tracks for every age and level, from first letters to full ijazah.",
-    ar: "مسارات منظمة لكل عمر ومستوى، من الحروف الأولى إلى الإجازة الكاملة.",
+    en: "A path that starts at age 4 and never closes — children, youth, mothers and fathers all have a place.",
+    am: "ከ4 ዓመት የሚጀምር እና የማይቋረጥ ጉዞ — ህጻናት፣ ወጣቶች፣ እናቶች እና አባቶች ሁሉም ቦታ አላቸው።",
   },
-  "p1.title": { en: "Hifz Track", ar: "مسار الحفظ" },
+  "p1.title": { en: "KG Level", am: "የኪጂ ሌቭል" },
   "p1.body": {
-    en: "Full memorization of the Quran with daily revision circles and progress tracking.",
-    ar: "حفظ القرآن كاملاً مع حلقات مراجعة يومية ومتابعة دقيقة للتقدم.",
+    en: "The first steps for young children from age 4: letters, short surahs and good manners in a gentle setting.",
+    am: "ከ4 ዓመት ለሚጀምሩ ህጻናት የመጀመሪያ እርምጃ፦ ሆሄያት፣ አጫጭር ሱራዎች እና መልካም አኽላቅ በተመቻቸ አኳኋን።",
   },
-  "p2.title": { en: "Tajweed & Recitation", ar: "التجويد والتلاوة" },
+  "p2.title": { en: "Primary Level", am: "የፕራይመሪ ሌቭል" },
   "p2.body": {
-    en: "Rules of tajweed applied practically until recitation is fluent and correct.",
-    ar: "أحكام التجويد تطبيقاً عملياً حتى تستقيم التلاوة وتصح.",
+    en: "Quran reading and memorization together with the basics of Tawheed, Fiqh and Hadith, using kitabs prepared for their age.",
+    am: "የቁርአን ንባብና ሂፍዝ ከተውሂድ፣ ፊቅህ እና ሃዲስ መሰረታዊያን ጋር፣ ለእድሜያቸው በተዘጋጁ ኪታቦች።",
   },
-  "p3.title": { en: "Islamic Studies", ar: "العلوم الشرعية" },
+  "p3.title": { en: "Secondary Level", am: "የሰከንደሪ ሌቭል" },
   "p3.body": {
-    en: "Aqeedah, fiqh, seerah and Arabic language taught alongside the Quran.",
-    ar: "العقيدة والفقه والسيرة واللغة العربية إلى جانب القرآن.",
+    en: "Deeper study of the Islamic sciences for students who are continuing their regular schooling at the same time.",
+    am: "መደበኛ ት/ታቸውን እየተከታተሉ ላሉ ተማሪዎች የጠለቀ የዒልም ትምህርት።",
   },
-  "p4.title": { en: "Kids Foundation", ar: "تأسيس الصغار" },
+  "p4.title": { en: "Tertiary Level", am: "የቴሪዠሪ ሌቭል" },
   "p4.body": {
-    en: "Playful, gentle Nur Al-Bayan method for readers aged 5 to 9.",
-    ar: "منهج نور البيان بأسلوب محبب وميسر للأعمار ٥ إلى ٩ سنوات.",
+    en: "For university-age students: advanced kitabs across Quran, Hadith, Fiqh and Tawheed.",
+    am: "ለዩኒቨርሲቲ እድሜ ተማሪዎች፦ በቁርአን፣ ሃዲስ፣ ፊቅህ እና ተውሂድ የላቁ ኪታቦች።",
   },
-  "about.title": { en: "About the Institute", ar: "عن المعهد" },
+  "p5.title": { en: "Youth Classes", am: "የወጣቶች ደርስ" },
+  "p5.body": {
+    en: "Regular darsi for young men and women, connecting knowledge with daily life and character.",
+    am: "ለወጣት ወንዶችና ሴቶች መደበኛ ደርስ፣ እውቀትን ከዕለት ተዕለት ኑሮና ከአኽላቅ ጋር የሚያገናኝ።",
+  },
+  "p6.title": { en: "Mothers & Fathers", am: "የእናቶች እና የአባቶች ደርስ" },
+  "p6.body": {
+    en: "Open darsi for parents with no age limit — learning never stops in this madrasa.",
+    am: "ለወላጆች ያለ እድሜ ገደብ የሚሰጥ ደርስ — በዚህ መድረሳ ትምህርት አይቋረጥም።",
+  },
+  "p7.title": { en: "Advanced Level (planned)", am: "የአድቫንስ ሌቭል (በእቅድ ላይ)" },
+  "p7.body": {
+    en: "An advanced track is being prepared to graduate qualified alim and alimah students.",
+    am: "ብቁ ዓሊም/ዓሊማህ ለማፍራት የአድቫንስ ሌቭል ለማስጀመር በእቅድ ላይ ነን።",
+  },
+  "about.title": { en: "About the Madrasa", am: "ስለ መድረሳችን" },
   "about.lead": {
-    en: "We are a community Quran school built around one idea: every student deserves a teacher who knows their name, their level and their goal.",
-    ar: "نحن مدرسة قرآنية مجتمعية قامت على فكرة واحدة: كل طالب يستحق معلماً يعرف اسمه ومستواه وهدفه.",
+    en: "Founded in 2003 E.C. by 5 to 8 members of the Al Imam Hassan mosque community, so that children could gain deen knowledge without interrupting their regular schooling.",
+    am: "በ2003 ዓ/ም በአል ኢማም ሃሰን መስጂድ የመቃሚ ሰዎች (ከ5 እስከ 8 የሚሆኑ) የተመሰረተ ሲሆን፣ ልጆች ት/ታቸውን ሳያቋርጡ የዲን ትምህርት እንዲያገኙ ታስቦ ነው።",
   },
   "about.p1": {
-    en: "Founded in 1996 in a single classroom, the institute today serves hundreds of students across morning, evening and weekend circles. Our teachers hold connected isnad in recitation and are trained in modern classroom practice.",
-    ar: "تأسس المعهد عام ١٩٩٦ في فصل واحد، ويخدم اليوم مئات الطلاب في حلقات صباحية ومسائية ونهاية الأسبوع. معلمونا يحملون أسانيد متصلة في الرواية ومدربون على أساليب التعليم الحديثة.",
+    en: "The madrasa was built on a simple intention: give children a grounding that keeps the old foundation and still walks with the times, from childhood until they enter university — Quran, Hadith, Fiqh, Tawheed and the other branches of ilm.",
+    am: "መድረሳው የተመሰረተው የድሮውን መሰረት ያደረገ እና ከዘመኑ ጋር የሚሄድ የዲን ትምህርት ለመስጠት በማሰብ ነው። ልጆች ከህጻንነታቸው ጀምሮ ዩኒቨርሲቲ እስኪገቡ ድረስ ከቁርአን፣ ከሃዲስ፣ ከፊቅህ፣ ከተውሂድ እና ከመሳሰሉት የዒልም ዘርፎች እንዲቀስሙ ነው።",
   },
   "about.p2": {
-    en: "Alongside memorization we care for character: punctuality, respect, cleanliness and service. Families receive regular reports so learning continues at home.",
-    ar: "وإلى جانب الحفظ نعتني بالأخلاق: الالتزام والاحترام والنظافة وخدمة الناس. وتتلقى الأسر تقارير دورية ليستمر التعلم في البيت.",
+    en: "The early years brought real difficulties: finding enough ustadhs, paying them fairly, and sourcing kitabs suited to each level. By the permission of Allah we worked within our means — training our own ustadhs and preparing kitabs matched to each age and stage.",
+    am: "በምስረታው ወቅት በቂ ኡስታዞችን የማግኘት፣ ለኡስታዞች በቂ ደሞዝ የመክፈል እና ለልጆች በየደረጃቸው የሚመጥን ኪታብ የማግኘት ችግሮች ተከስተው ነበር። በአላህ ፍቃድ በቻልነው ልክ ኡስታዞችን በማምረት እና በየእድሜያቸው ልክ ኪታብ በማዘጋጀት ችግሩ ተፈቷል።",
   },
-  "about.missionT": { en: "Our Mission", ar: "رسالتنا" },
+  "about.p3": {
+    en: "What sets us apart is that every age group has a class of its own — from four-year-olds to fathers and mothers — with more than five kinds of darsi taught beyond the Quran itself.",
+    am: "መድረሳችንን ከሌሎች ልዩ የሚያደርገው ለሁሉም የእድሜ ክልል ትምህርት ማዘጋጀታችን ነው — ከ4 ዓመት ህጻናት እስከ አባቶችና እናቶች — እንዲሁም ከቁርአን ባሻገር ከአምስት በላይ የደርስ አይነቶች መስጠታችን።",
+  },
+  "about.missionT": { en: "Our Mission", am: "ተልዕኮ" },
   "about.missionB": {
-    en: "To raise a generation that recites the Quran correctly, understands its meanings and acts upon it.",
-    ar: "تخريج جيل يتلو القرآن صحيحاً ويفهم معانيه ويعمل به.",
+    en: "To give quality education that combines Islamic character (akhlaq) with modern scientific knowledge, so our students succeed in both the akhirah and the dunya.",
+    am: "ኢስላማዊ ስነ-ምግባርን (አኽላቅ) ከዘመናዊ ሳይንሳዊ እውቀት ጋር በማቀናጀት፣ ተማሪዎቻችን በአኺራም ሆነ በዱንያ ስኬታማ እንዲሆኑ የሚያስችል ጥራት ያለው ትምህርት መስጠት።",
   },
-  "about.visionT": { en: "Our Vision", ar: "رؤيتنا" },
+  "about.visionT": { en: "Our Vision", am: "ራዕይ" },
   "about.visionB": {
-    en: "A reference Quran institute known for teaching quality, sincerity and organized administration.",
-    ar: "معهد قرآني مرجعي يُعرف بجودة التعليم والإخلاص والإدارة المنظمة.",
+    en: "To raise generations proud of their deen, rich in both religious and modern knowledge, and a light for the world — excellent alim and alimah.",
+    am: "በዲናቸው የሚኮሩ፣ በዲናዊ እና በዘመናዊ እውቀት የበለጸጉና ለዓለም ብርሃን የሚሆኑ ምርጥ ዓሊም/ዓሊማህ የሆኑ ትውልዶችን ማፍራት።",
   },
-  "about.valuesT": { en: "Our Values", ar: "قيمنا" },
+  "about.valuesT": { en: "Core Values", am: "እሴቶቻችን" },
   "about.valuesB": {
-    en: "Ikhlas, discipline, mercy with students, and continuous improvement.",
-    ar: "الإخلاص والانتظام والرحمة بالطلاب والتطوير المستمر.",
+    en: "Raising a generation that joins knowledge with akhlaq; upholding Islamic values in word and deed; passing on what we have learned to those it has not reached.",
+    am: "እውቀትን ከአኽላቅ ጋር ያጣመረ ትውልድ መፍጠር፤ በንግግር እና በተግባር የእስልምናን እሴቶች ማስጠበቅ፤ የተማርነውን እውቀት ላልደረሳቸው ማድረስ።",
   },
-  "faq.title": { en: "Frequently Asked Questions", ar: "الأسئلة الشائعة" },
+  "faq.title": { en: "Frequently Asked Questions", am: "ተደጋግመው የሚጠየቁ ጥያቄዎች" },
   "faq.sub": {
-    en: "Answers to what families ask us most before enrolling.",
-    ar: "إجابات لأكثر ما تسأل عنه الأسر قبل التسجيل.",
+    en: "What families ask us most before registering.",
+    am: "ወላጆች ከምዝገባ በፊት በብዛት የሚጠይቁን።",
   },
-  "faq.q1": { en: "What is the minimum age for enrollment?", ar: "ما هو أقل سن للتسجيل؟" },
+  "faq.q1": { en: "From what age do you accept children?", am: "ልጆችን ከስንት ዓመት ጀምሮ ትቀበላላችሁ?" },
   "faq.a1": {
-    en: "We accept students from age 5 in the Kids Foundation track, and from age 10 in the Hifz track. Adult evening circles have no age limit.",
-    ar: "نقبل الطلاب من عمر ٥ سنوات في مسار تأسيس الصغار، ومن عمر ١٠ سنوات في مسار الحفظ. وحلقات الكبار المسائية بلا حد للعمر.",
+    en: "Children are accepted from age 4 in the KG level. For the mothers' and fathers' classes there is no age limit at all.",
+    am: "ህጻናት ከ4 ዓመት ጀምሮ በኪጂ ሌቭል ይቀበላሉ። የእናቶች እና የአባቶች ደርስ ደግሞ የእድሜ ገደብ የለውም።",
   },
-  "faq.q2": { en: "What are the class timings?", ar: "ما هي أوقات الحلقات؟" },
+  "faq.q2": { en: "Will it clash with regular school?", am: "ከመደበኛ ትምህርት ጋር ይጋጫል?" },
   "faq.a2": {
-    en: "Morning circles run 8:00–11:30, evening circles 16:30–19:00, and weekend intensives on Saturday mornings.",
-    ar: "الحلقات الصباحية من ٨:٠٠ إلى ١١:٣٠، والمسائية من ٤:٣٠ إلى ٧:٠٠، ودورات مكثفة صباح السبت.",
+    en: "No. The madrasa was founded exactly so that children can study their deen without interrupting their regular schooling.",
+    am: "አይጋጭም። መድረሳው የተመሰረተው ልጆች ት/ታቸውን ሳያቋርጡ የዲን ትምህርት እንዲማሩ ታስቦ ነው።",
   },
-  "faq.q3": { en: "Are the fees affordable, and is aid available?", ar: "هل الرسوم ميسّرة وهل يوجد دعم؟" },
+  "faq.q3": { en: "What subjects are taught?", am: "ምን ምን ትምህርቶች ይሰጣሉ?" },
   "faq.a3": {
-    en: "Fees are kept low and partial or full scholarships are available for orphans and low-income families after review.",
-    ar: "الرسوم منخفضة، ويتوفر إعفاء جزئي أو كامل لليتامى والأسر محدودة الدخل بعد الدراسة.",
+    en: "Quran, Hadith, Fiqh, Tawheed and other branches of ilm — more than five kinds of darsi beyond the Quran itself.",
+    am: "ቁርአን፣ ሃዲስ፣ ፊቅህ፣ ተውሂድ እና ሌሎች የዒልም ዘርፎች — ከቁርአን ባሻገር ከአምስት በላይ የደርስ አይነቶች።",
   },
-  "faq.q4": { en: "Do you teach girls and boys separately?", ar: "هل يُدرَّس الأولاد والبنات بشكل منفصل؟" },
+  "faq.q4": { en: "Which levels are available?", am: "የትኞቹ ደረጃዎች አሉ?" },
   "faq.a4": {
-    en: "Yes. Separate wings and separate teaching staff are provided for boys and girls.",
-    ar: "نعم، هناك أقسام منفصلة وكوادر تعليمية منفصلة للأولاد والبنات.",
+    en: "KG, Primary, Secondary and Tertiary levels, plus classes for youth, mothers and fathers. An advanced level is planned.",
+    am: "የኪጂ፣ የፕራይመሪ፣ የሰከንደሪ እና የቴሪዠሪ ሌቭል፣ እንዲሁም የወጣቶች፣ የእናቶች እና የአባቶች ደርስ። የአድቫንስ ሌቭል በእቅድ ላይ ነው።",
   },
-  "faq.q5": { en: "How do parents follow their child's progress?", ar: "كيف يتابع الأهل تقدم أبنائهم؟" },
+  "faq.q5": { en: "Are the kitabs suited to each level?", am: "ኪታቦቹ ለየደረጃው የተመጠኑ ናቸው?" },
   "faq.a5": {
-    en: "Teachers record daily memorization and revision. Parents receive a weekly summary and a termly report card.",
-    ar: "يسجل المعلمون الحفظ والمراجعة يومياً، ويتلقى الأهل ملخصاً أسبوعياً وشهادة تقييم كل فصل.",
+    en: "Yes. Finding suitable kitabs was one of our earliest challenges, so we prepared kitabs matched to each age and level ourselves.",
+    am: "አዎ። ተስማሚ ኪታብ ማግኘት ከመጀመሪያዎቹ ችግሮቻችን ስለነበር በየእድሜውና በየደረጃው የሚመጥን ኪታብ ራሳችን አዘጋጅተናል።",
   },
-  "faq.q6": { en: "Do you issue an ijazah certificate?", ar: "هل تصدرون شهادة إجازة؟" },
+  "faq.q6": { en: "When are the classes given?", am: "ትምህርቱ መቼ ይሰጣል?" },
   "faq.a6": {
-    en: "Yes, after completing memorization and passing a full recitation examination before a certified sheikh.",
-    ar: "نعم، بعد إتمام الحفظ والنجاح في اختبار عرض كامل أمام شيخ مجاز.",
+    en: "Office and class hours are 2:00 – 12:30 local time. Contact the administration for the timetable of a specific level.",
+    am: "የቢሮና የትምህርት ሰዓት ከ2:00 – 12:30 (በአካባቢ ሰዓት) ነው። የአንድ ደረጃን መርሃ ግብር ለማወቅ አስተዳደሩን ያግኙ።",
   },
-  "contact.title": { en: "Contact Us", ar: "اتصل بنا" },
+  "contact.title": { en: "Contact Us", am: "አግኙን" },
   "contact.sub": {
-    en: "Visit us, call, or send a message and the administration will reply within one working day.",
-    ar: "زرنا أو اتصل أو أرسل رسالة وسترد الإدارة خلال يوم عمل واحد.",
+    en: "Visit us at the Imam Hassan mosque or send a message and the administration will get back to you.",
+    am: "በኢማም ሃሰን መስጂድ ይጎብኙን ወይም መልእክት ይላኩልን፤ አስተዳደሩ ምላሽ ይሰጥዎታል።",
   },
-  "contact.address": { en: "Address", ar: "العنوان" },
-  "contact.addressV": { en: "12 Al-Nahda Street, Old District", ar: "١٢ شارع النهضة، الحي القديم" },
-  "contact.phone": { en: "Phone", ar: "الهاتف" },
-  "contact.email": { en: "Email", ar: "البريد الإلكتروني" },
-  "contact.hours": { en: "Office hours", ar: "ساعات العمل" },
-  "contact.hoursV": { en: "Sun–Thu, 8:00 – 16:00", ar: "الأحد–الخميس، ٨:٠٠ – ٤:٠٠" },
-  "form.name": { en: "Full name", ar: "الاسم الكامل" },
-  "form.email": { en: "Email address", ar: "البريد الإلكتروني" },
-  "form.message": { en: "Message", ar: "الرسالة" },
-  "form.send": { en: "Send message", ar: "إرسال الرسالة" },
+  "contact.address": { en: "Address", am: "አድራሻ" },
+  "contact.addressV": {
+    en: "Kolfe, Atena Tera — Imam Hassan Mosque, Addis Ababa",
+    am: "ኮልፌ፣ አጠና ተራ — ኢማም ሃሰን መስጂድ፣ አዲስ አበባ",
+  },
+  "contact.hours": { en: "Office hours", am: "የቢሮ ሰዓት" },
+  "contact.hoursV": { en: "2:00 – 12:30 (local time)", am: "2:00 – 12:30 (በአካባቢ ሰዓት)" },
+  "contact.place": { en: "Where we are", am: "የምንገኝበት" },
+  "contact.placeV": {
+    en: "Inside the Al Imam Hassan mosque compound",
+    am: "በአል ኢማም ሃሰን መስጂድ ግቢ ውስጥ",
+  },
+  "contact.reg": { en: "Registration", am: "ምዝገባ" },
+  "contact.regV": {
+    en: "Register in person at the madrasa office during office hours",
+    am: "በቢሮ ሰዓት በአካል በመድረሳው ቢሮ መመዝገብ ይቻላል",
+  },
+  "form.name": { en: "Full name", am: "ሙሉ ስም" },
+  "form.email": { en: "Email address", am: "ኢሜይል" },
+  "form.message": { en: "Message", am: "መልእክት" },
+  "form.send": { en: "Send message", am: "መልእክት ላክ" },
   "form.note": {
     en: "Message delivery is not wired up yet — the backend is in progress.",
-    ar: "إرسال الرسائل غير مفعّل بعد — الجزء الخلفي قيد الإنشاء.",
+    am: "መልእክት መላኪያው ገና አልተገናኘም — የኋላ ስርዓቱ በስራ ላይ ነው።",
   },
-  "portal.title": { en: "Staff Portal", ar: "بوابة الموظفين" },
+  "portal.title": { en: "Staff Portal", am: "የሰራተኞች መግቢያ" },
   "portal.sub": {
-    en: "For teachers and administration only. Sign in to manage circles, attendance and student progress.",
-    ar: "للمعلمين والإدارة فقط. سجّل الدخول لإدارة الحلقات والحضور وتقدم الطلاب.",
+    en: "For ustadhs and administration only. Sign in to manage classes, attendance and student progress.",
+    am: "ለኡስታዞች እና ለአስተዳደር ብቻ። ክፍሎችን፣ የተማሪ ተገኝነትን እና እድገትን ለማስተዳደር ይግቡ።",
   },
-  "portal.id": { en: "Staff ID or email", ar: "الرقم الوظيفي أو البريد" },
-  "portal.password": { en: "Password", ar: "كلمة المرور" },
-  "portal.signin": { en: "Sign in", ar: "تسجيل الدخول" },
+  "portal.id": { en: "Staff ID or email", am: "የሰራተኛ መለያ ወይም ኢሜይል" },
+  "portal.password": { en: "Password", am: "የይለፍ ቃል" },
+  "portal.signin": { en: "Sign in", am: "ግባ" },
   "portal.pending": {
     en: "Authentication is not connected yet — the backend team is building it.",
-    ar: "المصادقة غير متصلة بعد — فريق الخلفية يعمل عليها.",
+    am: "የመግቢያ ማረጋገጫው ገና አልተገናኘም — የኋላ ስርዓት ቡድኑ እየሰራው ነው።",
   },
-  "portal.back": { en: "Back to website", ar: "العودة إلى الموقع" },
-  "cta.title": { en: "Admissions are open for the new term", ar: "التسجيل مفتوح للفصل الجديد" },
+  "portal.back": { en: "Back to website", am: "ወደ ድረ-ገጹ ተመለስ" },
+  "cta.title": { en: "Registration is open for new students", am: "ለአዲስ ተማሪዎች ምዝገባ ክፍት ነው" },
   "cta.sub": {
-    en: "Places in each circle are limited so every student gets individual attention.",
-    ar: "المقاعد محدودة في كل حلقة ليحصل كل طالب على عناية فردية.",
+    en: "Places in each class are limited so every student gets individual attention.",
+    am: "በእያንዳንዱ ክፍል ቦታው ውስን ነው፤ ይህም እያንዳንዱ ተማሪ ተገቢውን ትኩረት እንዲያገኝ ነው።",
   },
   "footer.tag": {
-    en: "Teaching the Book of Allah with care since 1996.",
-    ar: "نعلّم كتاب الله بعناية منذ عام ١٩٩٦.",
+    en: "Teaching the Book of Allah and the Islamic sciences in Kolfe since 2003 E.C.",
+    am: "ከ2003 ዓ/ም ጀምሮ በኮልፌ የአላህን ኪታብ እና የዲን ዕውቀት እያስተማርን።",
   },
-  "footer.links": { en: "Pages", ar: "الصفحات" },
-  "footer.rights": { en: "All rights reserved.", ar: "جميع الحقوق محفوظة." },
-  "theme.toggle": { en: "Toggle theme", ar: "تبديل المظهر" },
+  "footer.links": { en: "Pages", am: "ገጾች" },
+  "footer.rights": { en: "All rights reserved.", am: "መብቱ በህግ የተጠበቀ ነው።" },
+  "theme.toggle": { en: "Toggle theme", am: "ገጽታ ቀይር" },
 };
 
 type Ctx = { lang: Lang; setLang: (l: Lang) => void; t: (k: string) => string; dir: "ltr" | "rtl" };
@@ -176,7 +213,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     const stored = window.localStorage.getItem("lang");
-    if (stored === "ar" || stored === "en") setLangState(stored);
+    if (stored === "am" || stored === "en") setLangState(stored);
   }, []);
 
   const setLang = useCallback((l: Lang) => {
@@ -184,7 +221,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     window.localStorage.setItem("lang", l);
   }, []);
 
-  const dir = lang === "ar" ? "rtl" : "ltr";
+  const dir = "ltr" as const;
 
   useEffect(() => {
     document.documentElement.lang = lang;
