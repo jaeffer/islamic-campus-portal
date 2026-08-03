@@ -2,6 +2,7 @@ import { createFileRoute, Link } from "@tanstack/react-router";
 import { BookOpen, GraduationCap, HeartHandshake, Users } from "lucide-react";
 
 import { HeroBackdrop } from "@/components/hero-backdrop";
+import { HeroQuote } from "@/components/hero-quote";
 import { PageShell } from "@/components/page-shell";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
@@ -56,9 +57,9 @@ function Home() {
             <h1 className="mt-4 font-display text-4xl font-bold leading-tight text-on-hero sm:text-6xl">
               {t("school.name")}
             </h1>
-            <p className="mt-3 font-display text-xl text-on-hero/90 sm:text-2xl">
-              {t("hero.title")}
-            </p>
+            <div className="relative">
+              <HeroQuote />
+            </div>
             <p className="mt-5 max-w-xl text-sm leading-relaxed text-on-hero-muted sm:text-base">
               {t("hero.sub")}
             </p>
