@@ -34,7 +34,7 @@ const dict: Dict = {
     en: "Quran, Hadith, Fiqh and Tawheed taught from age 4 up to university level — and beyond, with dedicated classes for youth, mothers and fathers.",
     am: "ቁርአን፣ ሃዲስ፣ ፊቅህ እና ተውሂድ ከ4 ዓመት ጀምሮ እስከ ዩኒቨርሲቲ ደረጃ — እንዲሁም ለወጣቶች፣ ለእናቶች እና ለአባቶች የተዘጋጁ ደርሶች።",
   },
-  "hero.cta1": { en: "Register a student", am: "ተማሪ ያስመዝግቡ" },
+  "hero.cta1": { en: "Visit the madrasa", am: "መድረሳውን ይጎብኙ" },
   "hero.cta2": { en: "See our levels", am: "ደረጃዎቻችንን ይመልከቱ" },
   "stats.students": { en: "Learning from age 4", am: "ከ4 ዓመት ጀምሮ" },
   "stats.teachers": { en: "Levels offered", am: "የትምህርት ደረጃዎች" },
