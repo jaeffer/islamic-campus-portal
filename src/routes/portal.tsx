@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, ShieldCheck } from "lucide-react";
 
-import hero1 from "@/assets/hero-1.jpg";
+import institute1 from "@/assets/institute-1.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
