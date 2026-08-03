@@ -42,8 +42,8 @@ function About() {
           <p>{t("about.p3")}</p>
         </div>
         <img
-          src={hero2}
-          alt="Study hall of Al Imam Hassan Quran Institute with wooden desks and shelves of kitabs"
+          src={institute3.url}
+          alt="The Al Imam Hassan Quran Institute building surrounded by gardens"
           width={1920}
           height={1088}
           loading="lazy"
