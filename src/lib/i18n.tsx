@@ -190,10 +190,10 @@ const dict: Dict = {
     am: "የመግቢያ ማረጋገጫው ገና አልተገናኘም — የኋላ ስርዓት ቡድኑ እየሰራው ነው።",
   },
   "portal.back": { en: "Back to website", am: "ወደ ድረ-ገጹ ተመለስ" },
-  "cta.title": { en: "Registration is open for new students", am: "ለአዲስ ተማሪዎች ምዝገባ ክፍት ነው" },
+  "cta.title": { en: "Come and see us in person", am: "በአካል ጎብኙን" },
   "cta.sub": {
-    en: "Places in each class are limited so every student gets individual attention.",
-    am: "በእያንዳንዱ ክፍል ቦታው ውስን ነው፤ ይህም እያንዳንዱ ተማሪ ተገቢውን ትኩረት እንዲያገኝ ነው።",
+    en: "The administration welcomes families at the madrasa office during office hours.",
+    am: "አስተዳደሩ በቢሮ ሰዓት ቤተሰቦችን በመድረሳው ቢሮ ይቀበላል።",
   },
   "footer.tag": {
     en: "Teaching the Book of Allah and the Islamic sciences in Kolfe since 2003 E.C.",
