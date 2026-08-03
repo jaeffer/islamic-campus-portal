@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import hero2 from "@/assets/hero-2.jpg";
+import institute3 from "@/assets/institute-3.jpg.asset.json";
 import { PageHeader, PageShell } from "@/components/page-shell";
 import { useI18n } from "@/lib/i18n";
 
