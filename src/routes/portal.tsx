@@ -3,7 +3,7 @@ import { Lock, ShieldCheck } from "lucide-react";
 
 import institute1 from "@/assets/institute-1.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
-import { useI18n } from "@/lib/i18n";
+import { languages, nextLang, useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
 export const Route = createFileRoute("/portal")({
@@ -51,10 +51,10 @@ function Portal() {
             <div className="flex gap-2">
               <button
                 type="button"
-                onClick={() => setLang(lang === "en" ? "am" : "en")}
+                onClick={() => setLang(nextLang(lang))}
                 className="rounded-md border border-border px-2.5 py-1.5 text-xs font-semibold hover:bg-accent"
               >
-                {lang === "en" ? "አማርኛ" : "EN"}
+                {languages.find((l) => l.code === nextLang(lang))?.label}
               </button>
               <button
                 type="button"

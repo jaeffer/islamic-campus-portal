@@ -3,7 +3,7 @@ import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 
 import logoAsset from "@/assets/logo.png.asset.json";
-import { useI18n } from "@/lib/i18n";
+import { languages, nextLang, useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
 const links = [
@@ -49,11 +49,11 @@ export function SiteHeader() {
         <div className="ms-auto flex items-center gap-2 lg:ms-0">
           <button
             type="button"
-            onClick={() => setLang(lang === "en" ? "am" : "en")}
+            onClick={() => setLang(nextLang(lang))}
             className="rounded-md border border-border px-2.5 py-2 text-xs font-semibold tracking-wide text-foreground transition-colors hover:bg-accent"
             aria-label="Change language"
           >
-            {lang === "en" ? "አማርኛ" : "EN"}
+            {languages.find((l) => l.code === nextLang(lang))?.label}
           </button>
           <button
             type="button"
