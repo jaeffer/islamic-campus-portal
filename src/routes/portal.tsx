@@ -31,8 +31,8 @@ function Portal() {
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden lg:block">
         <img
-          src={hero1}
-          alt="Courtyard of the institute at golden hour"
+          src={institute1.url}
+          alt="Al Imam Hassan mosque compound at golden hour"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
