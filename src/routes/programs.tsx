@@ -25,13 +25,29 @@ export const Route = createFileRoute("/programs")({
 function Programs() {
   const { t, lang } = useI18n();
   const items = [
-    { t: "p1.title", b: "p1.body", meta: { en: "From age 4", am: "ከ4 ዓመት ጀምሮ" } },
-    { t: "p2.title", b: "p2.body", meta: { en: "Primary school students", am: "የፕራይመሪ ተማሪዎች" } },
-    { t: "p3.title", b: "p3.body", meta: { en: "Secondary school students", am: "የሰከንደሪ ተማሪዎች" } },
-    { t: "p4.title", b: "p4.body", meta: { en: "University level", am: "የዩኒቨርሲቲ ደረጃ" } },
-    { t: "p5.title", b: "p5.body", meta: { en: "Youth", am: "ወጣቶች" } },
-    { t: "p6.title", b: "p6.body", meta: { en: "No age limit", am: "የእድሜ ገደብ የለውም" } },
-    { t: "p7.title", b: "p7.body", meta: { en: "Coming soon", am: "በቅርቡ" } },
+    { t: "p1.title", b: "p1.body", meta: { en: "From age 4", am: "ከ4 ዓመት ጀምሮ", ar: "من سن الرابعة" } },
+    {
+      t: "p2.title",
+      b: "p2.body",
+      meta: { en: "Primary school students", am: "የፕራይመሪ ተማሪዎች", ar: "طلاب المرحلة الابتدائية" },
+    },
+    {
+      t: "p3.title",
+      b: "p3.body",
+      meta: { en: "Secondary school students", am: "የሰከንደሪ ተማሪዎች", ar: "طلاب المرحلة الثانوية" },
+    },
+    {
+      t: "p4.title",
+      b: "p4.body",
+      meta: { en: "University level", am: "የዩኒቨርሲቲ ደረጃ", ar: "المرحلة الجامعية" },
+    },
+    { t: "p5.title", b: "p5.body", meta: { en: "Youth", am: "ወጣቶች", ar: "الشباب" } },
+    {
+      t: "p6.title",
+      b: "p6.body",
+      meta: { en: "No age limit", am: "የእድሜ ገደብ የለውም", ar: "بلا حدّ للعمر" },
+    },
+    { t: "p7.title", b: "p7.body", meta: { en: "Coming soon", am: "በቅርቡ", ar: "قريباً" } },
   ] as const;
 
   return (

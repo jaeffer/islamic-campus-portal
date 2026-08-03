@@ -299,5 +299,5 @@ export function useI18n() {
 
 export function nextLang(current: Lang): Lang {
   const i = languages.findIndex((l) => l.code === current);
-  return languages[(i + 1) % languages.length].code;
+  return languages[(i + 1) % languages.length]?.code ?? "en";
 }
