@@ -1,9 +1,10 @@
 import { useEffect, useState, type ReactNode } from "react";
 
-import hero1 from "@/assets/hero-1.jpg";
-import hero2 from "@/assets/hero-2.jpg";
+import institute1 from "@/assets/institute-1.jpg.asset.json";
+import institute2 from "@/assets/institute-2.jpg.asset.json";
+import institute3 from "@/assets/institute-3.jpg.asset.json";
 
-const slides = [hero1, hero2];
+const slides = [institute1.url, institute2.url, institute3.url];
 
 export function HeroBackdrop({
   children,
