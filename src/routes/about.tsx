@@ -1,6 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import hero2 from "@/assets/hero-2.jpg";
+import institute3 from "@/assets/institute-3.jpg.asset.json";
 import { PageHeader, PageShell } from "@/components/page-shell";
 import { useI18n } from "@/lib/i18n";
 
@@ -42,8 +42,8 @@ function About() {
           <p>{t("about.p3")}</p>
         </div>
         <img
-          src={hero2}
-          alt="Study hall of Al Imam Hassan Quran Institute with wooden desks and shelves of kitabs"
+          src={institute3.url}
+          alt="The Al Imam Hassan Quran Institute building surrounded by gardens"
           width={1920}
           height={1088}
           loading="lazy"

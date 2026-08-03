@@ -1,7 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, ShieldCheck } from "lucide-react";
 
-import hero1 from "@/assets/hero-1.jpg";
+import institute1 from "@/assets/institute-1.jpg.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
@@ -31,8 +31,8 @@ function Portal() {
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden lg:block">
         <img
-          src={hero1}
-          alt="Courtyard of the institute at golden hour"
+          src={institute1.url}
+          alt="Al Imam Hassan mosque compound at golden hour"
           width={1920}
           height={1088}
           className="absolute inset-0 h-full w-full object-cover"
