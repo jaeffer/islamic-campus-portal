@@ -10,13 +10,13 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Al Imam Hassan Mosque &amp; Madereesa — Quran, Hadith, Fiqh & Tawheed" },
+      { title: "Al Imam Hassan Mosque & Madereesa — Quran & Islamic Studies" },
       {
         name: "description",
         content:
           "A Quran madrasa in Kolfe, Addis Ababa, teaching children from age 4 up to university level, plus darsi for youth, mothers and fathers.",
       },
-      { property: "og:title", content: "Al Imam Hassan Mosque &amp; Madereesa" },
+      { property: "og:title", content: "Al Imam Hassan Mosque & Madereesa" },
       {
         property: "og:description",
         content: "Deen knowledge alongside school, for every age — since 2003 E.C.",
