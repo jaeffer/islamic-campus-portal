@@ -28,7 +28,8 @@ export function HeroQuote() {
             </p>
           )}
           <p className="mt-2 font-display text-xl text-on-hero sm:text-2xl">{q.text[lang]}</p>
-          <figcaption className="mt-2 text-xs font-semibold uppercase tracking-[0.16em] text-on-hero-muted">
+          <figcaption className="mt-3 flex items-center gap-2 text-[11px] font-semibold uppercase tracking-[0.18em] text-on-hero-muted">
+            <span aria-hidden className="h-px w-8 bg-gold/70" />
             {q.ref[lang]}
           </figcaption>
         </blockquote>
