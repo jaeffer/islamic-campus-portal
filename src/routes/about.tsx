@@ -7,13 +7,13 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Al Imam Hassan Quran Institute — Mission & Story" },
+      { title: "About Al Imam Hassan Mosque &amp; Madereesa — Mission & Story" },
       {
         name: "description",
         content:
           "Founded in 2003 E.C. by the Al Imam Hassan mosque community in Kolfe, Addis Ababa, so children gain deen knowledge without interrupting school.",
       },
-      { property: "og:title", content: "About Al Imam Hassan Quran Institute" },
+      { property: "og:title", content: "About Al Imam Hassan Mosque &amp; Madereesa" },
       {
         property: "og:description",
         content: "Our story, vision, mission and core values.",
@@ -43,7 +43,7 @@ function About() {
         </div>
         <img
           src={institute3.url}
-          alt="The Al Imam Hassan Quran Institute building surrounded by gardens"
+          alt="The Al Imam Hassan Mosque &amp; Madereesa building surrounded by gardens"
           width={1920}
           height={1088}
           loading="lazy"

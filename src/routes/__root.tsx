@@ -80,19 +80,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Al Imam Hassan Quran Institute" },
+      { title: "Al Imam Hassan Mosque &amp; Madereesa" },
       {
         name: "description",
         content:
           "Quran madrasa in Kolfe, Addis Ababa teaching Quran, Hadith, Fiqh and Tawheed for every age.",
       },
-      { property: "og:title", content: "Al Imam Hassan Quran Institute" },
+      { property: "og:title", content: "Al Imam Hassan Mosque &amp; Madereesa" },
       {
         property: "og:description",
         content:
           "Quran madrasa in Kolfe, Addis Ababa teaching Quran, Hadith, Fiqh and Tawheed for every age.",
       },
-      { property: "og:site_name", content: "Al Imam Hassan Quran Institute" },
+      { property: "og:site_name", content: "Al Imam Hassan Mosque &amp; Madereesa" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],

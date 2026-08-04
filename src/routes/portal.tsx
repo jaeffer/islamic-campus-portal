@@ -9,13 +9,13 @@ import { useTheme } from "@/lib/theme";
 export const Route = createFileRoute("/portal")({
   head: () => ({
     meta: [
-      { title: "Staff Portal Sign In — Al Imam Hassan Quran Institute" },
+      { title: "Staff Portal Sign In — Al Imam Hassan Mosque &amp; Madereesa" },
       {
         name: "description",
         content:
           "Secure sign-in for ustadhs and administration to manage classes, attendance and student progress.",
       },
-      { property: "og:title", content: "Staff Portal — Al Imam Hassan Quran Institute" },
+      { property: "og:title", content: "Staff Portal — Al Imam Hassan Mosque &amp; Madereesa" },
       { property: "og:description", content: "Sign in to the madrasa staff portal." },
       { name: "robots", content: "noindex" },
     ],
