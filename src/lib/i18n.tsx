@@ -14,9 +14,9 @@ type Dict = Record<string, { en: string; am: string; ar: string }>;
 
 const dict: Dict = {
   "school.name": {
-    en: "Al Imam Hassan Quran Institute",
-    am: "አል ኢማም ሃሰን ቁርአን መድረሳ",
-    ar: "معهد الإمام حسن لتعليم القرآن",
+    en: "Al Imam Hassan Mosque & Madereesa",
+    am: "አል ኢማም ሃሰን መስጂድ እና መድረሳ",
+    ar: "مسجد الإمام حسن والمدرسة",
   },
   "school.short": { en: "Al Imam Hassan", am: "አል ኢማም ሃሰን", ar: "الإمام حسن" },
   "school.kicker": { en: "Quran Madrasa", am: "ቁርአን መድረሳ", ar: "مدرسة قرآنية" },
@@ -212,9 +212,9 @@ const dict: Dict = {
   },
   "contact.place": { en: "Where we are", am: "የምንገኝበት", ar: "موقعنا" },
   "contact.placeV": {
-    en: "Inside the Al Imam Hassan mosque compound",
-    am: "በአል ኢማም ሃሰን መስጂድ ግቢ ውስጥ",
-    ar: "داخل حرم مسجد الإمام حسن",
+    en: "Inside the Al Imam Hassan Medressa compound",
+    am: "በአል ኢማም ሃሰን መድረሳ ግቢ ውስጥ",
+    ar: "داخل مجمّع مدرسة الإمام حسن",
   },
   "contact.reg": { en: "Registration", am: "ምዝገባ", ar: "التسجيل" },
   "contact.regV": {
@@ -250,6 +250,33 @@ const dict: Dict = {
   },
   "footer.links": { en: "Pages", am: "ገጾች", ar: "الصفحات" },
   "footer.rights": { en: "All rights reserved.", am: "መብቱ በህግ የተጠበቀ ነው።", ar: "جميع الحقوق محفوظة." },
+  "contact.map": { en: "Find us on the map", am: "በካርታ ላይ ያግኙን", ar: "اعرض موقعنا على الخريطة" },
+  "contact.mapSub": {
+    en: "Kolfe, Atena Tera — the madrasa sits inside the Al Imam Hassan mosque compound.",
+    am: "ኮልፌ፣ አጠና ተራ — መድረሳው በአል ኢማም ሃሰን መስጂድ ግቢ ውስጥ ይገኛል።",
+    ar: "كولفي، أطينا تيرا — تقع المدرسة داخل مجمّع مسجد الإمام حسن.",
+  },
+  "contact.directions": { en: "Open in Google Maps", am: "በጉግል ማፕ ክፈት", ar: "افتح في خرائط جوجل" },
+  "faq.lead": {
+    en: "Everything families ask before they visit — ages, levels, subjects and class hours, in one place.",
+    am: "ወላጆች ከመጎብኘት በፊት የሚጠይቁት ሁሉ — እድሜ፣ ደረጃ፣ ትምህርቶች እና ሰዓት በአንድ ቦታ።",
+    ar: "كل ما تسأل عنه الأسر قبل الزيارة — الأعمار والمستويات والمواد وأوقات الدروس في مكان واحد.",
+  },
+  "faq.stillT": { en: "Still have a question?", am: "ሌላ ጥያቄ አለዎት?", ar: "لديك سؤال آخر؟" },
+  "faq.stillB": {
+    en: "The administration answers in person at the madrasa office during office hours.",
+    am: "አስተዳደሩ በቢሮ ሰዓት በመድረሳው ቢሮ በአካል ይመልስልዎታል።",
+    ar: "تجيب الإدارة حضورياً في مكتب المدرسة خلال ساعات العمل.",
+  },
+  "faq.ages": { en: "Ages & admission", am: "እድሜና ቅበላ", ar: "الأعمار والقبول" },
+  "faq.learning": { en: "Learning", am: "ትምህርት", ar: "التعليم" },
+  "faq.practical": { en: "Practical", am: "ተግባራዊ", ar: "معلومات عملية" },
+  "portal.forgot": {
+    en: "Lost your password? Ask the administration at the office.",
+    am: "የይለፍ ቃልዎን ካጡ አስተዳደሩን በቢሮ ይጠይቁ።",
+    ar: "إن فقدت كلمة المرور فاسأل الإدارة في المكتب.",
+  },
+  "portal.remember": { en: "Keep me signed in", am: "ግባቴን አስታውስ", ar: "أبقني مسجّلاً" },
   "theme.toggle": { en: "Toggle theme", am: "ገጽታ ቀይር", ar: "تبديل المظهر" },
 };
 
