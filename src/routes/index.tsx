@@ -4,7 +4,6 @@ import { BookOpen, GraduationCap, HeartHandshake, Users } from "lucide-react";
 import { HeroBackdrop } from "@/components/hero-backdrop";
 import { HeroQuote } from "@/components/hero-quote";
 import { PageShell } from "@/components/page-shell";
-import logoAsset from "@/assets/logo.png.asset.json";
 import { useI18n } from "@/lib/i18n";
 
 export const Route = createFileRoute("/")({
@@ -50,7 +49,7 @@ function Home() {
       <HeroBackdrop>
         <div className="mx-auto max-w-6xl px-4 pb-24 pt-40 sm:px-6">
           <div className="max-w-2xl">
-            <img src={logoAsset.url} alt="" width={64} height={64} className="mb-6 h-16 w-16 drop-shadow" />
+            <img src="/logo.png" alt="" width={64} height={64} className="mb-6 h-16 w-16 rounded-full object-cover shadow-lift" />
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
               {t("hero.eyebrow")}
             </p>

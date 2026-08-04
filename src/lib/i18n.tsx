@@ -278,6 +278,56 @@ const dict: Dict = {
   },
   "portal.remember": { en: "Keep me signed in", am: "ግባቴን አስታውስ", ar: "أبقني مسجّلاً" },
   "theme.toggle": { en: "Toggle theme", am: "ገጽታ ቀይር", ar: "تبديل المظهر" },
+  "admissions.title": { en: "Admissions Information", am: "የምዝገባ እና ቅበላ መረጃ", ar: "معلومات القبول والتسجيل" },
+  "admissions.sub": {
+    en: "Everything you need to know about joining Al Imam Hassan Mosque & Madereesa.",
+    am: "ወደ አል ኢማም ሃሰን መድረሳ ለመቀላቀል የሚያስፈልጉ መረጃዎችና መስፈርቶች።",
+    ar: "كل ما تحتاج معرفته للانضمام إلى مدرسة الإمام حسن.",
+  },
+  "admissions.whoT": { en: "Who can apply?", am: "ማን ማመልከት ይችላል?", ar: "من يمكنه التقديم؟" },
+  "admissions.whoB": {
+    en: "Anyone (brothers & sisters) who wishes to learn the Quran and Islamic studies.",
+    am: "ማንኛውም ለወንድ እና ለሴት ቁርአን መቅራት የሚፈልግ ሁሉ ማመልከት ይችላል።",
+    ar: "جميع الراغبين والراغبات في تعلّم القرآن الكريم والعلوم الشرعية.",
+  },
+  "admissions.reqT": { en: "Admission requirements", am: "የመግቢያ መስፈርቶች", ar: "متطلبات القبول" },
+  "admissions.reqB": {
+    en: "Full address, age, photo, previous kitabs studied & Quran level, parent phone numbers (or personal phone number for adults).",
+    am: "ሙሉ አድራሻ፣ እድሜ፣ ፎቶ፣ ከዚህ በፊት የቀሩት ኪታብ ካለ የቁርአናቸው ደረጃ፣ የአባት እና የእናት ስ.ቁጥር (የትልልቆች ከሆነ የራሳቸው ስ.ቁ)።",
+    ar: "العنوان الكامل، العمر، الصورة الشخصية، الكتب المقروءة سابقاً ومستوى القرآن، رقم هاتف الوالدين (أو رقم هاتف المتقدمين الكبار).",
+  },
+  "admissions.docT": { en: "Required documents", am: "ሚያስፈልጉ ሰነዶችና መረጃዎች", ar: "المستندات والبيانات المطلوبة" },
+  "admissions.docB": {
+    en: "Full address (specific area name or nearest mosque name), full name with grandfather and mother's name, attached with the requirements.",
+    am: "ሙሉ አድራሻ (የሚኖሩበት ቦታ ልዩ ስም ወይም አቅራቢያው ያለው የመስጂድ ስም)፣ ሙሉ ስም ከነ አያት፣ የእናት ስም ወዘተ... እና ከላይ ከተጠቀሱት ጋር ማያያዝ።",
+    ar: "العنوان الكامل (اسم المنطقة بالتفصيل أو أقرب مسجد)، الاسم الثلاثي مع اسم الأم، وإرفاقها مع المستندات أعلاه.",
+  },
+  "admissions.procT": { en: "Admission process", am: "የምዝገባ ሂደት", ar: "إجراءات القبول" },
+  "admissions.procB": {
+    en: "After submitting the required information and completing the payment, your registration will be confirmed.",
+    am: "ከላይ የተጠቀሱትን መረጃዎች ካስገቡ እና ክፍያ ካጠናቀቁ በኋላ ምዝገባቸው ይረጋገጣል።",
+    ar: "بعد تقديم البيانات المطلوبة وإتمام الدفع، يتم تأكيد التسجيل.",
+  },
+  "admissions.examT": { en: "Entrance / Placement exam", am: "የመግቢያ / የምደባ ፈተና", ar: "اختبار القبول والمستوى" },
+  "admissions.examB": {
+    en: "Placement evaluation available across each level, starting from the KG level.",
+    am: "በየደረጃው ቢኖር አሪፍ ነው፤ በቀድሞ ሌቭል ማለትም ከኬጂ ሌቭል ጀምሮ።",
+    ar: "اختبار تحديد مستوى متاح لجميع المراحل بدءاً من مستوى الروضة.",
+  },
+  "admissions.periodT": { en: "Registration period", am: "የምዝገባ ጊዜ", ar: "فترة التسجيل" },
+  "admissions.periodB": {
+    en: "For summer: until all classes are filled or up to 3 weeks. For winter/rainy season: open for 2 weeks.",
+    am: "ለበጋ ሁሉም ክፍሎች እስኪሞሉ ድረስ ወይም ለ3 ሳምንት፤ የክረምት ለ2 ሳምንት የሚቆይ።",
+    ar: "في فصل الصيف حتى اكتمال المقاعد أو لمدة ٣ أسابيع، وفي فصل الشتاء لمدة أسبوعين.",
+  },
+  "admissions.feesT": { en: "Fees structure", am: "የክፍያ መረጃ", ar: "رسوم الدراسة" },
+  "admissions.feesB": {
+    en: "Registration fee and monthly fee, as well as term options (3-month, 6-month, or annual payment).",
+    am: "የመመዝገቢያ እና ወርሃዊ ክፍያ፤ እንዲሁም በተርም የ 3ወር፣ የ6ወር እና የአመት ክፍያ።",
+    ar: "رسوم التسجيل والرسوم الشهرية، بالإضافة إلى خيارات الدفع الفصلي (٣ أشهر، ٦ أشهر، أو سنوياً).",
+  },
+  "admissions.contactT": { en: "Admissions contact", am: "የምዝገባ ስልክ ቁጥር", ar: "هاتف قسم التسجيل" },
+  "admissions.contactB": { en: "+251 945500403", am: "+251 945500403", ar: "+251 945500403" },
 };
 
 export const languages: { code: Lang; label: string }[] = [

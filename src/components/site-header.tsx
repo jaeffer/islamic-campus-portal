@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import { useState } from "react";
 
-import logoAsset from "@/assets/logo.png.asset.json";
 import { languages, nextLang, useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
@@ -23,7 +22,7 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b border-border/70 bg-background/85 backdrop-blur-lg">
       <div className="mx-auto flex h-18 max-w-6xl items-center gap-3 px-4 py-3 sm:px-6">
         <Link to="/" className="flex items-center gap-3" onClick={() => setOpen(false)}>
-          <img src={logoAsset.url} alt="" width={40} height={40} className="h-10 w-10" />
+          <img src="/logo.png" alt="" width={40} height={40} className="h-10 w-10 rounded-full object-cover shadow-sm" />
           <span className="flex flex-col leading-tight">
             <span className="font-display text-base font-bold sm:text-lg">{t("school.short")}</span>
             <span className="text-[11px] uppercase tracking-[0.14em] text-muted-foreground">

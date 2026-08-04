@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Lock, ShieldCheck } from "lucide-react";
 
-import institute1 from "@/assets/institute-1.jpg.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
 import { languages, nextLang, useI18n } from "@/lib/i18n";
 import { useTheme } from "@/lib/theme";
 
@@ -31,7 +29,7 @@ function Portal() {
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden lg:block">
         <img
-          src={institute1.url}
+          src="/institute-1.jpg"
           alt="Al Imam Hassan mosque compound at golden hour"
           width={1920}
           height={1088}
@@ -47,7 +45,7 @@ function Portal() {
       <div className="flex flex-col justify-center bg-background px-6 py-14 sm:px-14">
         <div className="mx-auto w-full max-w-sm">
           <div className="mb-8 flex items-center justify-between">
-            <img src={logoAsset.url} alt="" width={44} height={44} className="h-11 w-11" />
+            <img src="/logo.png" alt="" width={44} height={44} className="h-11 w-11 rounded-full object-cover shadow-sm" />
             <div className="flex gap-2">
               <button
                 type="button"
@@ -111,11 +109,6 @@ function Portal() {
           </form>
 
           <p className="mt-3 text-xs text-muted-foreground">{t("portal.forgot")}</p>
-
-          <p className="mt-4 flex items-start gap-2 rounded-lg border border-border bg-secondary p-3 text-xs text-muted-foreground">
-            <ShieldCheck className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-            {t("portal.pending")}
-          </p>
 
           <Link
             to="/"

@@ -1,6 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
 
-import institute3 from "@/assets/institute-3.jpg.asset.json";
 import { PageHeader, PageShell } from "@/components/page-shell";
 import { useI18n } from "@/lib/i18n";
 
@@ -42,7 +41,7 @@ function About() {
           <p>{t("about.p3")}</p>
         </div>
         <img
-          src={institute3.url}
+          src="/institute-3.jpg"
           alt="The Al Imam Hassan Mosque & Madereesa building surrounded by gardens"
           width={1920}
           height={1088}
@@ -51,13 +50,55 @@ function About() {
         />
       </section>
 
-      <section className="mx-auto grid max-w-6xl gap-5 px-4 pb-20 sm:px-6 md:grid-cols-3">
+      <section className="mx-auto grid max-w-6xl gap-5 px-4 pb-12 sm:px-6 md:grid-cols-3">
         {pillars.map((p) => (
           <article key={p.t} className="card-surface p-6">
             <h2 className="font-display text-xl font-bold">{t(p.t)}</h2>
             <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t(p.b)}</p>
           </article>
         ))}
+      </section>
+
+      <section className="border-t border-border bg-card/50 py-16">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6">
+          <div className="max-w-2xl">
+            <h2 className="font-display text-3xl font-bold sm:text-4xl">{t("admissions.title")}</h2>
+            <p className="mt-2 text-muted-foreground">{t("admissions.sub")}</p>
+          </div>
+
+          <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { titleKey: "admissions.whoT", bodyKey: "admissions.whoB" },
+              { titleKey: "admissions.reqT", bodyKey: "admissions.reqB" },
+              { titleKey: "admissions.docT", bodyKey: "admissions.docB" },
+              { titleKey: "admissions.procT", bodyKey: "admissions.procB" },
+              { titleKey: "admissions.examT", bodyKey: "admissions.examB" },
+              { titleKey: "admissions.periodT", bodyKey: "admissions.periodB" },
+              { titleKey: "admissions.feesT", bodyKey: "admissions.feesB" },
+              {
+                titleKey: "admissions.contactT",
+                bodyKey: "admissions.contactB",
+                isPhone: true,
+              },
+            ].map((item) => (
+              <article key={item.titleKey} className="card-surface flex flex-col justify-between p-6">
+                <div>
+                  <h3 className="font-display text-lg font-bold text-foreground">{t(item.titleKey)}</h3>
+                  {item.isPhone ? (
+                    <a
+                      href={`tel:${t(item.bodyKey)}`}
+                      className="mt-2 inline-block font-mono text-base font-semibold text-primary hover:underline"
+                    >
+                      {t(item.bodyKey)}
+                    </a>
+                  ) : (
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{t(item.bodyKey)}</p>
+                  )}
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
       </section>
     </PageShell>
   );
