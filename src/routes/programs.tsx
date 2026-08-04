@@ -6,13 +6,13 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/programs")({
   head: () => ({
     meta: [
-      { title: "Levels & Classes — Al Imam Hassan Quran Institute" },
+      { title: "Levels & Classes — Al Imam Hassan Mosque & Madereesa" },
       {
         name: "description",
         content:
           "KG, primary, secondary and tertiary levels plus darsi for youth, mothers and fathers — Quran, Hadith, Fiqh and Tawheed from age 4.",
       },
-      { property: "og:title", content: "Levels at Al Imam Hassan Quran Institute" },
+      { property: "og:title", content: "Levels at Al Imam Hassan Mosque & Madereesa" },
       {
         property: "og:description",
         content: "A path that starts at age 4 and continues for every age group.",
