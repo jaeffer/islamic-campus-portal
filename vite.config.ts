@@ -13,4 +13,9 @@ export default defineConfig({
     tailwindcss(),
     tsconfigPaths(),
   ],
+  server: {
+    watch: {
+      ignored: ['**/other_repo/server/data/**', '**/*.json'],
+    },
+  },
 });
