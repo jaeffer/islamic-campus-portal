@@ -51,8 +51,9 @@ function Portal() {
         return;
       }
 
-      const { accessToken, refreshToken, user } = body.data;
-      const role = user.profileType?.toLowerCase() || 'admin';
+      const payload = body.data || body;
+      const { accessToken, refreshToken, user } = payload;
+      const role = (user?.profileType || user?.role || 'admin').toLowerCase();
       const screen = role === 'teacher' ? 'teacher_dashboard' : 'admin_dashboard';
 
       // Assemble Zustand app state format
