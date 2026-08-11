@@ -25,6 +25,62 @@ function Portal() {
   const { t, lang, setLang } = useI18n();
   const { theme, toggle } = useTheme();
 
+  const [username, setUsername] = React.useState("");
+  const [password, setPassword] = React.useState("");
+  const [remember, setRemember] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
+  const [error, setError] = React.useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setError("");
+    setLoading(true);
+
+    try {
+      const res = await fetch("http://localhost:5000/api/auth/login/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ username, password }),
+      });
+
+      const body = await res.json();
+
+      if (!res.ok) {
+        setError(body.message || body.error || "Invalid credentials. Please try again.");
+        return;
+      }
+
+      const { accessToken, refreshToken, user } = body.data;
+      const role = user.profileType?.toLowerCase() || 'admin';
+      const screen = role === 'teacher' ? 'teacher_dashboard' : 'admin_dashboard';
+
+      // Assemble Zustand app state format
+      const appState = {
+        state: {
+          authenticated: true,
+          userRole: role,
+          currentScreen: screen,
+          currentUser: {
+            id: user.id,
+            name: user.profile?.fullName || user.username,
+            username: user.username,
+          },
+          currentLanguage: 'en',
+          rtlMode: false,
+        },
+        version: 0,
+      };
+
+      // Redirect to school management dashboard with state payload in URL params
+      const encoded = btoa(JSON.stringify(appState));
+      window.location.href = `http://localhost:5173?auth=${encoded}`;
+    } catch (err) {
+      setError("Cannot reach the server. Make sure the backend is running on port 5000.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
   return (
     <div className="grid min-h-screen lg:grid-cols-2">
       <div className="relative hidden lg:block">
@@ -68,7 +124,12 @@ function Portal() {
           <h1 className="font-display text-3xl font-bold">{t("portal.title")}</h1>
           <p className="mt-2 text-sm text-muted-foreground">{t("portal.sub")}</p>
 
-          <form className="mt-8 space-y-4" onSubmit={(e) => e.preventDefault()}>
+          <form className="mt-8 space-y-4" onSubmit={handleSubmit}>
+            {error && (
+              <div className="rounded-lg bg-destructive/10 p-3 text-xs font-medium text-destructive">
+                {error}
+              </div>
+            )}
             <div>
               <label htmlFor="staff-id" className="text-sm font-medium">
                 {t("portal.id")}
@@ -77,6 +138,8 @@ function Portal() {
                 id="staff-id"
                 required
                 dir="ltr"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
                 className="mt-1.5 w-full rounded-lg border border-input bg-card px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
@@ -89,22 +152,27 @@ function Portal() {
                 type="password"
                 required
                 dir="ltr"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
                 className="mt-1.5 w-full rounded-lg border border-input bg-card px-3 py-2.5 text-sm outline-none focus:ring-2 focus:ring-ring"
               />
             </div>
             <label className="flex items-center gap-2 text-sm text-muted-foreground">
               <input
                 type="checkbox"
+                checked={remember}
+                onChange={(e) => setRemember(e.target.checked)}
                 className="h-4 w-4 rounded border-input accent-primary"
               />
               {t("portal.remember")}
             </label>
             <button
               type="submit"
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90"
+              disabled={loading}
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-primary px-4 py-3 text-sm font-semibold text-primary-foreground transition-opacity hover:opacity-90 disabled:opacity-50"
             >
               <Lock className="h-4 w-4" />
-              {t("portal.signin")}
+              {loading ? "Signing in..." : t("portal.signin")}
             </button>
           </form>
 
